@@ -16,7 +16,7 @@ public class ExampleExceptionTest {
         return new Object[][]{
                 {2, 2, 4},
                 {2, 3, 6},
-                {5.1, 1, 5.1},
+                {5, 1, 5},
                 {10, 2, 20}
         };
     }
