@@ -38,21 +38,16 @@ public class ExampleExceptionTest {
 
     @Test(dataProvider = "data")
     public void testRectangleArea(int a, int b, int c) {
-        int actualResult = ExampleException.rectangleArea(a, b);
-        assertEquals(actualResult, c, "input value is correct");
-        try {
-        } catch (ArithmeticException ex) {
-            System.out.println("Division by zero");
-        }
+        int result = ExampleException.rectangleArea(a, b);
+        assertEquals(result, c, "input value is correct");
     }
-
 
     @Test(dataProvider = "negativeData")
     public void testRectangleAreaNegative(int a, int b) {
         try {
             ExampleException.rectangleArea(a, b);
         } catch (IllegalArgumentException e) {
-            assertEquals(e.getMessage(), ("input value is below zero!"));
+            assertEquals(e.getMessage(), "input value is below zero");
         }
     }
 }
