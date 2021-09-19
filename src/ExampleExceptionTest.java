@@ -46,6 +46,7 @@ public class ExampleExceptionTest {
     public void testRectangleAreaNegative(int a, int b) {
         try {
             ExampleException.rectangleArea(a, b);
+            fail("Expected an IlligalArgument to be thrown");
         } catch (IllegalArgumentException e) {
             assertEquals(e.getMessage(), "input value is below zero");
         }
